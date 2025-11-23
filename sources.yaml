@@ -1,0 +1,23 @@
+# keywords to match (lowercase)
+keywords:
+  - crm
+  - retention
+  - lifecycle
+  - "product manager"
+  - "associate product manager"
+  - "product lifecycle manager"
+  - "product analyst"
+  - "product marketing manager"
+  - "growth manager"
+  - martech
+locations:
+  - Dubai
+  - Abu Dhabi
+  - Sharjah
+  - Qatar
+  - Kuwait
+  - Oman
+  - Bahrain
+  - Saudi Arabia
+max_age_hours: 24
+email_subject_prefix: "CRM/Retention Jobs last 24h -"
