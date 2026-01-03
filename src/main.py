@@ -136,7 +136,7 @@ class JobAggregator:
             job_filter.enrich_job_with_matches(job)
         
         # Filter by date (last 24 hours posted)
-        cutoff = self.tz_handler.get_last_24h_cutoff()
+        cutoff = self.tz_handler.get_last_48h_cutoff()
         date_filtered = JobFilter.filter_by_date(filtered_jobs, cutoff)
         
         print(f"   After keyword filter: {len(filtered_jobs)} jobs")
