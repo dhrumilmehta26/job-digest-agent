@@ -1,4 +1,29 @@
-requests
-PyYAML
-python-dotenv
-serpapi
+# Core dependencies
+pymongo[srv]==4.6.1
+python-dotenv==1.0.0
+requests==2.31.0
+
+# For Google Jobs scraping
+beautifulsoup4==4.12.2
+lxml==5.1.0
+fake-useragent==1.4.0
+
+# For async operations
+aiohttp==3.9.1
+
+# For timezone handling
+pytz==2024.1
+
+# For scheduling (local runs)
+schedule==1.2.1
+
+# For API server (local UI)
+flask==3.0.0
+flask-cors==4.0.0
+
+# For HTML email templates
+jinja2==3.1.2
+
+# Utilities
+python-dateutil==2.8.2
+# hashlib-compat==1.0.1

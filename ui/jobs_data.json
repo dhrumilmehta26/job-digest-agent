@@ -1,0 +1,57 @@
+{
+  "jobs": [
+    {
+      "id": "sample_1",
+      "title": "Senior CRM Manager",
+      "company": "TechCorp Inc.",
+      "location": "Remote, USA",
+      "url": "https://example.com/job/1",
+      "source": "remotive",
+      "posted_date": "2024-01-15 10:30",
+      "keywords": ["CRM", "Marketing"],
+      "is_new": true,
+      "logo": ""
+    },
+    {
+      "id": "sample_2",
+      "title": "Retention Marketing Lead",
+      "company": "StartupXYZ",
+      "location": "New York, NY",
+      "url": "https://example.com/job/2",
+      "source": "remoteok",
+      "posted_date": "2024-01-15 09:00",
+      "keywords": ["Retention", "Growth"],
+      "is_new": true,
+      "logo": ""
+    },
+    {
+      "id": "sample_3",
+      "title": "Customer Success Manager",
+      "company": "SaaS Company",
+      "location": "Remote",
+      "url": "https://example.com/job/3",
+      "source": "arbeitnow",
+      "posted_date": "2024-01-14 15:00",
+      "keywords": ["Customer Success"],
+      "is_new": false,
+      "logo": ""
+    }
+  ],
+  "stats": {
+    "total_jobs": 3,
+    "jobs_last_24h": 3,
+    "jobs_last_48h": 3,
+    "new_jobs_last_24h": 2,
+    "by_source": {
+      "remotive": 1,
+      "remoteok": 1,
+      "arbeitnow": 1
+    },
+    "last_updated": "2024-01-15T12:00:00Z"
+  },
+  "generated_at": "2024-01-15T12:00:00Z",
+  "timezone": "America/New_York",
+  "_note": "This is sample data. Run 'python run.py' to fetch real jobs."
+}
+
+

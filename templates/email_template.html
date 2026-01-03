@@ -1,0 +1,136 @@
+<!--
+  Job Aggregator - Email Template Reference
+  
+  This template is embedded in the email_sender.py file.
+  This file is for reference only and is not used directly.
+  
+  Variables available:
+  - jobs: List of job dictionaries
+  - keywords: Search keywords string
+  - date_str: Formatted date string
+  
+  Each job has:
+  - title: Job title
+  - company: Company name
+  - location: Job location
+  - url: Application URL
+  - source: Job source (remotive, remoteok, etc.)
+  - keywords: List of matched keywords
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Email-safe CSS */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+        .stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .job-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .job-title a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .apply-btn {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .keyword {
+            background: #e8f4fd;
+            color: #2980b9;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 {{ keywords }} Jobs</h1>
+            <div class="subtitle">Daily Digest • {{ date_str }}</div>
+        </div>
+        
+        <div class="stats">
+            <div class="number">{{ jobs|length }}</div>
+            <div>new jobs found in the last 24 hours</div>
+        </div>
+        
+        {% for job in jobs %}
+        <div class="job-card">
+            <h3 class="job-title">
+                <a href="{{ job.url }}">📌 {{ job.title }}</a>
+            </h3>
+            <div class="job-meta">
+                <span>🏢 {{ job.company }}</span>
+                <span>📍 {{ job.location }}</span>
+            </div>
+            {% if job.keywords %}
+            <div class="keywords">
+                {% for kw in job.keywords %}
+                <span class="keyword">{{ kw }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <a href="{{ job.url }}" class="apply-btn">Apply Now →</a>
+        </div>
+        {% endfor %}
+        
+        <div class="footer">
+            <p>This email was sent by Job Aggregator</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
